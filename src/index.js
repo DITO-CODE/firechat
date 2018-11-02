@@ -15,6 +15,10 @@ var config = {
   };
   firebase.initializeApp(config);
 
+  const firestore = firebase.firestore();
+  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  firestore.settings(settings);
+
 ReactDOM.render(<RouterAPP />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
